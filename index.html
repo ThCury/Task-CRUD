@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="create-task-button">Create Task</button>
+    </header>
+
+    <main>
+        <section class="tasks">
+            <h2>To Do</h2>
+            <ul>
+                <li class="task">
+                    <div class="task-header">
+                        <h3>Write a blog post</h3>
+                        <span class="priority">High</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+                <li class="task">
+                    <div class="task-header">
+                        <h3>Finish design project</h3>
+                        <span class="priority">Medium</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+                <li class="task">
+                    <div class="task-header">
+                        <h3>Send email to client</h3>
+                        <span class="priority">Low</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="tasks">
+            <h2>In Progress</h2>
+            <ul>
+                <li class="task">
+                    <div class="task-header">
+                        <h3>Develop new feature</h3>
+                        <span class="priority">High</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+                <li class="task">
+                    <div class="task-header">
+                        <h3>Write user documentation</h3>
+                        <span class="priority">Medium</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="tasks">
+            <h2>Completed</h2>
+            <ul>
+                <li class="task">
+                    <div class="task-header">
+                        <h3>Deploy application</h3>
+                        <span class="priority">High</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+                <li class="task">
+                    <div class="task-header">
+                        <h3>Resolve bug report</h3>
+                        <span class="priority">Medium</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="create-task-modal">
+        <h2>Create Task</h2>
+        <form>
+            <label for="task-title">Task Title:</label>
+            <input type="text" id="task-title" name="taskTitle">
+
+            <label for="task-description">Task Description:</label>
+            <textarea id="task-description" name="taskDescription"></textarea>
+
+            <label for="task-due-date">Due Date:</label>
+            <input type="date" id="task-due-date" name="taskDueDate">
+
+            <label for="task-priority">Priority:</label>
+            <select id="task-priority" name="
