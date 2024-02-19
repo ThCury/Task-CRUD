@@ -5,6 +5,7 @@ import './App.css';
 import Task from './components/Task';
 import TaskForm from './components/TaskForm';
 import Search from './components/search';
+import Filter from './components/Filter';
 
 
 
@@ -62,16 +63,31 @@ const completeTask = (id) =>{
 
 const [search, setSearch] =  useState('');
 
+const [filter, setFilter] = useState();
+
+const [show, setShow] = useState("A to Z");
+
 
 //HTML
   return (
     <div className="app">
       <h1>My Tasks</h1>
+      
       <Search search={search} setSearch={setSearch} />
-
+      
+      <Filter filter={filter} setFilter={setFilter} />
+      
       <div className="taskList">
         {task
-          .filter((task) => task.text.toLowerCase().includes(search.toLowerCase())
+          .filter((task)=>
+           filter === "All" 
+           ? true 
+           : filter === "Completed" 
+           ? task.isCompleted 
+           : !task.isCompleted
+           )
+          .filter((task) =>
+           task.text.toLowerCase().includes(search.toLowerCase())
           )
           .map((task) => (
           <Task key={task.id} task={task} removeTask={removeTask} completeTask={completeTask} />

@@ -1,7 +1,7 @@
 
 const Search = ({search, setSearch}) => {
     return (
-        <div className="search-container">
+        <div className="search">
 
             <h2>Pesquisar</h2>
             <input type="text" 
