@@ -1,4 +1,5 @@
 My Tasks App
+
 This is a simple React application to manage your tasks. It allows you to add, remove, and mark tasks as completed. Additionally, it provides a search functionality to filter tasks based on their text.
 
 Features
